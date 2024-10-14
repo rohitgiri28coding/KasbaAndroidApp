@@ -233,7 +233,6 @@ class ProductDescription{
         }
     }
 
-    @OptIn(ExperimentalFoundationApi::class)
     @Composable
     fun SimpleMarqueeAd() {
         Column(Modifier.fillMaxWidth()) {
