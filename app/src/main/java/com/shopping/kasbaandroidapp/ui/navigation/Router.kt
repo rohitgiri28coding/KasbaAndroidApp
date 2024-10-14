@@ -11,6 +11,7 @@ sealed class Screen{
     data object ForgotPasswordScreen: Screen()
     data object ForgotPasswordResetLinkSentScreen: Screen()
     data object HomeScreen: Screen()
+    data object ProductDescription: Screen()
 }
 
 object Router {

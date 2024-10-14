@@ -4,12 +4,17 @@ import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import com.shopping.kasbaandroidapp.home.ProductLists
+import com.shopping.kasbaandroidapp.productdescription.ProductDescription
 import com.shopping.kasbaandroidapp.ui.navigation.Router
 import com.shopping.kasbaandroidapp.ui.navigation.Screen
 import com.shopping.kasbaandroidapp.ui.screens.ForgotPasswordScreen
 import com.shopping.kasbaandroidapp.ui.screens.ForgotPasswordScreenResetLinkSent
-import com.shopping.kasbaandroidapp.ui.screens.HomeScreen
 import com.shopping.kasbaandroidapp.ui.screens.LoginScreen
 import com.shopping.kasbaandroidapp.ui.screens.SignUpScreen
 import com.shopping.kasbaandroidapp.ui.screens.TermsAndConditionsScreen
@@ -17,7 +22,9 @@ import com.shopping.kasbaandroidapp.ui.screens.WelcomeScreen
 
 @Composable
 fun App( ){
-    
+    var id by remember {
+        mutableIntStateOf(0)
+    }
 //    var user by rememberSaveable {
 //        mutableStateOf(auth.currentUser)
 //    }
@@ -70,16 +77,15 @@ fun App( ){
                     ForgotPasswordScreen()
                 }
                 Screen.HomeScreen -> {
-                        HomeScreen(
-//                            user = auth.currentUser!!,
-//                            onSignOut = {
-//                                scope.launch {
-//                                    user = null
-//                                    googleAuth.signOutUser()
-//                                }
-//                            }
-                        )
+                    val obj = ProductLists()
+                    obj.ProductListing{
+                        id = it
+                    }
 
+                }
+                Screen.ProductDescription ->{
+                    val obj = ProductDescription()
+                    obj.LoadProductInFullPage(id = id)
                 }
                 Screen.ForgotPasswordResetLinkSentScreen -> {
                     ForgotPasswordScreenResetLinkSent()

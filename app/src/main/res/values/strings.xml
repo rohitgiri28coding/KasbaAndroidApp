@@ -27,5 +27,6 @@
     <string name="reset_password_msg">Enter your email address and we\'ll send you a link to reset your password</string>
     <string name="reset_link_sent_msg">A link has been sent on the provided email address to reset the password.\nAfter resetting the password click here to Login again.</string>
     <string name="web_client_id">186585528056-anf09jjftpp70p5j4oud04dfv8vbo64p.apps.googleusercontent.com</string>
+    <string name="placeholder_search">Search by keyword</string>
 
 </resources>
