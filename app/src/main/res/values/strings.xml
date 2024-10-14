@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Kasba</string>
+    <string name="hello">Hey there,</string>
+    <string name="create_an_account">Create An Account</string>
+    <string name="first_name">First Name</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="last_name">Last Name</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="term_of_use">Term of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="by_continuing_you_accept_our">"By continuing you accept our "</string>
+    <string name="and">" and "</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">"Already have an account? "</string>
+    <string name="login">Login</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?   </string>
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="otp">OTP</string>
+    <string name="reset_password_msg">Enter your email address and we\'ll send you a link to reset your password</string>
+    <string name="reset_link_sent_msg">A link has been sent on the provided email address to reset the password.\nAfter resetting the password click here to Login again.</string>
+    <string name="web_client_id">186585528056-anf09jjftpp70p5j4oud04dfv8vbo64p.apps.googleusercontent.com</string>
+
+</resources>
