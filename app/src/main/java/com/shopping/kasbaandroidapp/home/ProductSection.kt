@@ -56,7 +56,7 @@ class ProductSection {
                         ProductItem(
                             prod[i].imageSet[0],
                             {
-                                showProductFullPage(updateId, i)
+                                showProductFullPage(updateId, i+1)
                             },
                             prod[i].brand+" "+prod[i].category,
                             prod[i].discountOff*prod[i].mrp/100,
@@ -67,7 +67,7 @@ class ProductSection {
                         ProductItem(
                             prod[i+1].imageSet[0],
                             {
-                                showProductFullPage(updateId, i+1)
+                                showProductFullPage(updateId, i+2)
                             },
                             prod[i+1].brand+" "+prod[i+1].category,
                             prod[i+1].discountOff*prod[i+1].mrp/100,
@@ -82,7 +82,7 @@ class ProductSection {
                         ProductItem(
                             prod[i].imageSet[0],
                             {
-                                showProductFullPage(updateId, i)
+                                showProductFullPage(updateId, i+1)
                             },
                             prod[i].brand+" "+prod[i].category,
                             prod[i].discountOff*prod[i].mrp/100,
@@ -93,7 +93,7 @@ class ProductSection {
                         ProductItem(
                             prod[i+1].imageSet[0],
                             {
-                                showProductFullPage(updateId, i+1)
+                                showProductFullPage(updateId, i+2)
                             },
                             prod[i+1].brand+" "+prod[i+1].category,
                             prod[i+1].discountOff*prod[i+1].mrp/100,
