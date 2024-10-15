@@ -29,7 +29,7 @@ class CategoryContent
     @Composable
     fun GenerateLazyRow(onClicked: (String) -> Unit){
         LazyRow (horizontalArrangement = Arrangement.spacedBy(4.dp)){
-            items(Categories.category){ cat->
+            items(Categories.categories){ cat->
                 GenerateImage(
                     drawable = cat.img,
                     text = cat.category,
