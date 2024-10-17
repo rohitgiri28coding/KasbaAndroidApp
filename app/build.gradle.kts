@@ -68,7 +68,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.material.icons.extended.android)
-//    implementation(libs.mongodb.driver.kotlin.coroutine)
+    implementation("org.mongodb:mongodb-driver-kotlin-coroutine:4.x.x")
     implementation(libs.bson.kotlinx)
 
 
