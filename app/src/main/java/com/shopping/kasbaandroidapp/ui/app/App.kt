@@ -28,7 +28,6 @@ fun App( ){
 //    var user by rememberSaveable {
 //        mutableStateOf(auth.currentUser)
 //    }
-    // A surface container using the 'background' color from the theme
     Surface(modifier = Modifier.fillMaxSize()) {
         Crossfade(targetState = Router.currentScreen, label = "") { currentState->
             when(currentState.value){

@@ -68,6 +68,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.shopping.kasbaandroidapp.R
 import com.shopping.kasbaandroidapp.data.NavigationItem
 import com.shopping.kasbaandroidapp.ui.theme.BgColor
 import com.shopping.kasbaandroidapp.ui.theme.GrayColor
@@ -76,7 +77,6 @@ import com.shopping.kasbaandroidapp.ui.theme.Purple40
 import com.shopping.kasbaandroidapp.ui.theme.Secondary
 import com.shopping.kasbaandroidapp.ui.theme.Shape
 import com.shopping.kasbaandroidapp.ui.theme.TextColor
-import com.shopping.kasbaandroidapp.R
 
 @Composable
 fun NormalTextComposable(

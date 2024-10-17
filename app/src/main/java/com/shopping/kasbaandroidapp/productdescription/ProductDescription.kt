@@ -2,7 +2,6 @@ package com.shopping.kasbaandroidapp.productdescription
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
@@ -79,9 +78,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
-import com.shopping.kasbaandroidapp.R
 import com.shopping.kasbaandroidapp.ProductDetailedData
+import com.shopping.kasbaandroidapp.R
 import com.shopping.kasbaandroidapp.home.BottomAppBarHome
 import kotlinx.coroutines.launch
 import kotlin.math.cos
@@ -483,7 +481,6 @@ private fun BuyAndAddToCart(text: String, modifier: Modifier)
             }
         }
     }
-    @OptIn(ExperimentalFoundationApi::class)
     @Composable
     private fun GenerateProductImage(id:Int, onClick:(List<Int>)-> Unit) {
         val product = ProductDetailedData.products.find { it.id == id }
