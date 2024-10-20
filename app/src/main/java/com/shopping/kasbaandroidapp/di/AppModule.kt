@@ -22,7 +22,7 @@ object AppModule {
     @Singleton
     fun provideAuthApi(): AuthApi{
         return Retrofit.Builder()
-            .baseUrl("https://kasbaauth.onrender.com/")
+            .baseUrl("https://localhost:3300/api/auth/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
             .create()

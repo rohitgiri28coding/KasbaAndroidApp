@@ -31,7 +31,7 @@ class LoginViewModel @Inject constructor(private val repository: AuthRepository)
 
     private fun login() {
         viewModelScope.launch {
-            repository.authenticate()
+            repository.signIn(loginUiState.value.emailOrNumber)
         }
     }
 }

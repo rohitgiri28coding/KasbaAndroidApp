@@ -34,7 +34,7 @@ class NameViewModel @Inject constructor(
 
     private fun login() {
         viewModelScope.launch {
-            val res = repository.signUp(phoneNumber = "97404392382", name = nameUiState.value.name)
+            val res = repository.signUp(phoneNumber = "97404392382", name = "Rohit")
             when(res){
                 is AuthResult.Authorized -> Router.navigateTo(Screen.OTPScreen)
                 is AuthResult.Unauthorized -> message.value = "Unauthorized"

@@ -61,7 +61,7 @@ fun LoginScreen(
                     isEnabled = true
                 ) {
                     showLoader.value = true
-                    Router.navigateTo(Screen.SignUpScreen)
+                    loginViewModel.onEvent(LoginUiEvent.ValidateLoginButtonClicked)
                     showLoader.value = false
                 }
 
