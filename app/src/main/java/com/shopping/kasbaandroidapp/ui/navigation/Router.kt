@@ -5,13 +5,17 @@ import androidx.compose.runtime.mutableStateOf
 
 sealed class Screen{
     data object WelcomeScreen: Screen()
-    data object SignUpScreen: Screen()
-    data object TermsAndConditionsScreen: Screen()
     data object LoginScreen: Screen()
+    data object OTPScreen: Screen()
+    data object SignUpScreen: Screen()
+    data object NameScreen: Screen()
+    data object TermsAndConditionsScreen: Screen()
     data object ForgotPasswordScreen: Screen()
     data object ForgotPasswordResetLinkSentScreen: Screen()
     data object HomeScreen: Screen()
-    data object ProductDescription: Screen()
+    data object FullPageProductScreen: Screen()
+    data object CartScreen: Screen()
+    data object ProfileScreen: Screen()
 }
 
 object Router {
@@ -20,13 +24,4 @@ object Router {
     fun navigateTo(destination: Screen){
        currentScreen.value = destination
     }
-
-//    fun chooseAuthOrHome(user: FirebaseUser?){
-//        Log.d("chooseAuthOrHome", "$user")
-//        if(user == null){
-//            currentScreen.value = Screen.LoginScreen
-//        }else{
-//            currentScreen.value = Screen.HomeScreen
-//        }
-//    }
 }

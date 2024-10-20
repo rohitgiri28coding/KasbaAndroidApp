@@ -28,7 +28,6 @@ import com.shopping.kasbaandroidapp.ui.navigation.SystemBackButtonHandler
 import com.shopping.kasbaandroidapp.ui.theme.Primary
 import com.shopping.kasbaandroidapp.R
 
-@Preview
 @Composable
 fun ForgotPasswordScreen(forgotPasswordViewModel: ForgotPasswordViewModel = viewModel()) {
     Surface(

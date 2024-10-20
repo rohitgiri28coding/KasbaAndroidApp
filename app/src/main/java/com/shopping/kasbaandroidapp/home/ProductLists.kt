@@ -18,44 +18,45 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
-class ProductLists {
-    @Composable
-    fun ProductListing(updateId: (Int)->Unit) {
-            Scaffold(
-                topBar = {
-                        Surface (color = MaterialTheme.colorScheme.primaryContainer,
-                            modifier = Modifier
-                                .border(width = 2.dp, color = Color.Gray)
-                                .fillMaxWidth()
-                                .heightIn(max = 180.dp)
-                        ){
-                            val obj = TopAppBarHome()
-                            obj.GenerateTopAppBarHome()
-                        }
-                },
-                bottomBar = {
-                    BottomAppBar(
-                        containerColor = MaterialTheme.colorScheme.primaryContainer,
-                        contentColor = MaterialTheme.colorScheme.primary,
-                    ) {
-                        Surface (modifier = Modifier
-                            .fillMaxWidth()
-                            .background(MaterialTheme.colorScheme.primaryContainer)){
-                            val obj = BottomAppBarHome()
-                            obj.BottomAppBar(modifier = Modifier)
-                        }
-                    }
-                }
-            ) { innerPadding ->
-                Column(
-                    modifier = Modifier
-                        .padding(innerPadding),
-                    verticalArrangement = Arrangement.spacedBy(16.dp),
-                ) {
-                    Spacer(modifier = Modifier.size(4.dp))
-                    val obj = ProductSection()
-                    obj.ProductInColumns(updateId)
+@Composable
+fun ProductListing(updateId: (Int)->Unit) {
+    Scaffold(
+        topBar = {
+            Surface(
+                color = MaterialTheme.colorScheme.primaryContainer,
+                modifier = Modifier
+                    .border(width = 2.dp, color = Color.Gray)
+                    .fillMaxWidth()
+                    .heightIn(max = 180.dp)
+            ) {
+                val obj = TopAppBarHome()
+                obj.GenerateTopAppBarHome()
             }
+        },
+        bottomBar = {
+            BottomAppBar(
+                containerColor = MaterialTheme.colorScheme.primaryContainer,
+                contentColor = MaterialTheme.colorScheme.primary,
+            ) {
+                Surface(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(MaterialTheme.colorScheme.primaryContainer)
+                ) {
+                    val obj = BottomAppBarHome()
+                    obj.BottomAppBar(modifier = Modifier)
+                }
+            }
+        }
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            Spacer(modifier = Modifier.size(4.dp))
+            val obj = ProductSection()
+            obj.ProductInColumns(updateId)
         }
     }
 }

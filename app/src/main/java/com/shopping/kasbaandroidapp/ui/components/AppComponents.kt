@@ -262,43 +262,43 @@ fun CheckBoxComponent(onTextSelected: (String) -> Unit, newCheckedState: (Boolea
         Checkbox(checked = checkedState, onCheckedChange = {
             checkedState = !checkedState
         })
-        ClickableTextComponent(onTextSelected)
+//        ClickableTextComponent(onTextSelected)
     }
 }
 
-@Composable
-fun ClickableTextComponent(onTextSelected: (String) -> Unit){
-    val annotatedString = buildAnnotatedString {
-        append(stringResource(R.string.by_continuing_you_accept_our))
-        withStyle(style = SpanStyle(color = Primary)){
-            pushStringAnnotation(
-                tag = stringResource(R.string.privacy_policy),
-                annotation = stringResource(R.string.privacy_policy)
-            )
-            append(stringResource(R.string.privacy_policy))
-        }
-        append(stringResource(R.string.and))
-        withStyle(style = SpanStyle(color = Primary)){
-            pushStringAnnotation(
-                tag = stringResource(R.string.term_of_use),
-                annotation = stringResource(R.string.term_of_use)
-            )
-            append(stringResource(R.string.term_of_use))
-        }
-    }
-    ClickableText(
-        text = annotatedString
-    ) {offset->
-        annotatedString.getStringAnnotations(offset,offset)
-            .firstOrNull()?.also { span->
-                Log.d("ClickableTextComponent", span.toString())
-                if (span.item == "Term of Use" || span.item == "Privacy Policy"){
-                    onTextSelected(span.item)
-                }
-            }
-
-    }
-}
+//@Composable
+//fun ClickableTextComponent(onTextSelected: (String) -> Unit){
+//    val annotatedString = buildAnnotatedString {
+//        append(stringResource(R.string.by_continuing_you_accept_our))
+//        withStyle(style = SpanStyle(color = Primary)){
+//            pushStringAnnotation(
+//                tag = stringResource(R.string.privacy_policy),
+//                annotation = stringResource(R.string.privacy_policy)
+//            )
+//            append(stringResource(R.string.privacy_policy))
+//        }
+//        append(stringResource(R.string.and))
+//        withStyle(style = SpanStyle(color = Primary)){
+//            pushStringAnnotation(
+//                tag = stringResource(R.string.term_of_use),
+//                annotation = stringResource(R.string.term_of_use)
+//            )
+//            append(stringResource(R.string.term_of_use))
+//        }
+//    }
+//    ClickableText(
+//        text = annotatedString
+//    ) {offset->
+//        annotatedString.getStringAnnotations(offset,offset)
+//            .firstOrNull()?.also { span->
+//                Log.d("ClickableTextComponent", span.toString())
+//                if (span.item == "Term of Use" || span.item == "Privacy Policy"){
+//                    onTextSelected(span.item)
+//                }
+//            }
+//
+//    }
+//}
 
 @Composable
 fun ButtonComponent(
@@ -360,35 +360,35 @@ fun DividerComponent(){
     }
 }
 
-@Composable
-fun ClickableLoginTextComponent(txt: String, clickableText: String,onTextSelected: (String) -> Unit){
-    val annotatedString = buildAnnotatedString {
-        append(txt)
-        withStyle(style = SpanStyle(color = Primary)){
-            pushStringAnnotation(tag = clickableText, annotation = clickableText)
-            append(clickableText)
-        }
-    }
-    ClickableText(text = annotatedString,
-        modifier = Modifier
-            .fillMaxWidth()
-            .heightIn(min = 40.dp),
-        style = TextStyle(
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Normal,
-            fontStyle = FontStyle.Normal,
-            textAlign = TextAlign.Center
-        ),) {offset->
-        annotatedString.getStringAnnotations(offset,offset)
-            .firstOrNull()?.also { span->
-                Log.d("ClickableTextComponent", span.toString())
-                if (span.item == clickableText){
-                    onTextSelected(span.item)
-                }
-            }
-
-    }
-}
+//@Composable
+//fun ClickableLoginTextComponent(txt: String, clickableText: String,onTextSelected: (String) -> Unit){
+//    val annotatedString = buildAnnotatedString {
+//        append(txt)
+//        withStyle(style = SpanStyle(color = Primary)){
+//            pushStringAnnotation(tag = clickableText, annotation = clickableText)
+//            append(clickableText)
+//        }
+//    }
+//    ClickableText(text = annotatedString,
+//        modifier = Modifier
+//            .fillMaxWidth()
+//            .heightIn(min = 40.dp),
+//        style = TextStyle(
+//            fontSize = 18.sp,
+//            fontWeight = FontWeight.Normal,
+//            fontStyle = FontStyle.Normal,
+//            textAlign = TextAlign.Center
+//        ),) {offset->
+//        annotatedString.getStringAnnotations(offset,offset)
+//            .firstOrNull()?.also { span->
+//                Log.d("ClickableTextComponent", span.toString())
+//                if (span.item == clickableText){
+//                    onTextSelected(span.item)
+//                }
+//            }
+//
+//    }
+//}
 
 @Composable
 fun UnderlinedTextComposable(textValue: String, onClick:()->Unit){

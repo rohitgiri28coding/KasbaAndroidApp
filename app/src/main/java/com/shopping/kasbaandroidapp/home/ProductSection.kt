@@ -125,7 +125,7 @@ class ProductSection {
 
     private fun showProductFullPage(updateId: (Int) -> Unit, i: Int) {
         updateId(i)
-        Router.navigateTo(Screen.ProductDescription)
+        Router.navigateTo(Screen.FullPageProductScreen)
     }
 
     @Composable

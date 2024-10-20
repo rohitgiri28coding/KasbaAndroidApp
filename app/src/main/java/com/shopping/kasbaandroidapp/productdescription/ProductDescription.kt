@@ -85,9 +85,9 @@ import kotlinx.coroutines.launch
 import kotlin.math.cos
 import kotlin.math.sin
 
-class ProductDescription{
+
     @Composable
-    fun LoadProductInFullPage(id: Int) {
+    fun LoadProductInFullPage(id: Int=0) {
         Scaffold(topBar = {
             Surface(
                 color = MaterialTheme.colorScheme.primaryContainer,
@@ -714,4 +714,3 @@ private fun BuyAndAddToCart(text: String, modifier: Modifier)
             }
         }
     }
-}
