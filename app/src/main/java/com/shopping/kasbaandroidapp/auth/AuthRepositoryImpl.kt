@@ -46,9 +46,12 @@ class AuthRepositoryImpl(
             if(e.code() == 401){
                 AuthResult.Unauthorized()
             }else{
+                Log.e("Error1","${e.printStackTrace()}")
+
                 AuthResult.UnknownError()
             }
         }catch (e: Exception){
+            Log.e("Error2","${e.printStackTrace()}")
             AuthResult.UnknownError()
         }    }
 
